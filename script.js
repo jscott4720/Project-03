@@ -13,5 +13,10 @@ fetch(url)
   .then((res) => {
     for (i = 0; i < res.results.length; i++) {
       img[i].src = res.results[i].image;
+      img[i].addEventListener("click", gotClicked)
+      function gotClicked(){
+          levelWinner.style.opacity = 1
+      }
     }
+    
   });

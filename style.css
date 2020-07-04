@@ -7,9 +7,20 @@
 
 img {
     height: 200px;
-    width : 
+    width : auto;
+    cursor : pointer 
 }
-
-
-
+.level-winner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 4rem;
+    background-color: #111;
+    text-align: center;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 250ms ease;
+  }
 

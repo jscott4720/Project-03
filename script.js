@@ -8,6 +8,9 @@ img = document.querySelectorAll("img");
 
 closeButton = document.querySelector(".close") 
 
+
+
+
 fetch(url)
   .then((res) => res.json())
   .then((res) => {
@@ -36,8 +39,14 @@ fetch(url)
       
       function openPopUp(e){
         e.preventDefault()
-        popUp.innerText = `Name : ${name} | Status : ${status} | Species : ${species} | Type : ${type} | Gender : ${gender} | Location : ${location} | Image :
-        ${img[i]}`
+       popUp.innerText = `Name : ${name} 
+       Status : ${status} 
+       Species : ${species}  
+       Type : ${type}  
+       Gender : ${gender}
+       Location : ${location} `
+
+      
         
         popUp.style.opacity = .75
         closeButton.style.opacity = 1

@@ -1,20 +1,60 @@
+head{
+    font-family: 'Shadows Into Light', cursive;
+}
 .characters{
     display: flex;
     flex-wrap: wrap; 
     justify-content: space-between;
     align-items: space-between;
 }
+header{
+    background-color: black;
+    color: white;
+    height: 100px;
+    text-align: center;
+    font-size: x-large;   
+    width: 100%;
+    margin-top: -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+body{
+    background-color: grey;
+}
+
 
 img {
     height: 200px;
     width : auto;
-    cursor : pointer 
-
+    cursor : pointer;
+    border: 1px solid black;
+    box-shadow: 10px 10px #333030 ;
+    margin-top: 10px;
 }
+.close {
+    position: absolute;
+    top:55%;
+    right: 28%;
+    color: white;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    opacity: 0;
+  }
+  
+
 .pop-up {
     position: absolute;
-    top: 50%;
+    top: 75%;
     left: 50%;
+
     transform: translate(-50%, -50%);
     padding: 4rem;
     background-color: #111;
@@ -24,18 +64,6 @@ img {
     pointer-events: none;
     transition: all 250ms ease;
     color : white;
-  }
-  .close {
-    position: absolute;
-    top:35%;
-    right: 27%;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    opacity: 0;
+    width : 500px;
   }
   

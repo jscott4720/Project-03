@@ -1,22 +1,48 @@
 url = "https://rickandmortyapi.com/api/character/";
 
-rickIMG = document.querySelector(".rick");
-mortyIMG = document.querySelector(".morty");
+popUp = document.querySelector(".pop-up")
 
 allcharacters = document.querySelectorAll(".characters");
-let ul = document.querySelector("ul");
-let li = document.querySelectorAll("li");
-let img = document.querySelectorAll("img");
+
+img = document.querySelectorAll("img");
 
 fetch(url)
   .then((res) => res.json())
   .then((res) => {
-    for (i = 0; i < res.results.length; i++) {
+    for (i = 0; i < img.length; i++) {
       img[i].src = res.results[i].image;
-      img[i].addEventListener("click", gotClicked)
-      function gotClicked(){
-          levelWinner.style.opacity = 1
-      }
+      
+      let name = res.results[i].name
+      
+      let status = res.results[i].status
+      
+      let species = res.results[i].species
+      
+      let type = res.results[i].type
+      
+      let gender = res.results[i].gender
+      
+      let location = res.results[i].location.name
+
+     // popUp.innerText = JSON.stringify(res.results[i])
+      //console.log(res.results[i].location.name)
+      //console.log(res.results[i])
+      
+       img[i].addEventListener("click", openPopUp)
+      
+      function openPopUp(e){
+        e.preventDefault()
+        popUp.innerText = `Name : ${name} | Status : ${status} | Species : ${species} | Type : ${type} | Gender : ${gender} | Location : ${location} | Image :
+        ${img[i]}`
+        
+        popUp.style.opacity = 1
     }
+}
+
+  // button.addEventListener('click', closePopUp)
+
+  // function closePopUp() {
+  //   popUp.style.opacity = 0
+  // }
     
   });

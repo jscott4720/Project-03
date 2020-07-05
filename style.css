@@ -9,7 +9,7 @@ img {
     height: 200px;
     width : auto;
     cursor : pointer 
-    
+
 }
 .pop-up {
     position: absolute;
@@ -25,4 +25,17 @@ img {
     transition: all 250ms ease;
     color : white;
   }
-
+  .close {
+    position: absolute;
+    top:35%;
+    right: 27%;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    opacity: 0;
+  }
+  

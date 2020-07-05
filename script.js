@@ -6,6 +6,8 @@ allcharacters = document.querySelectorAll(".characters");
 
 img = document.querySelectorAll("img");
 
+closeButton = document.querySelector(".close") 
+
 fetch(url)
   .then((res) => res.json())
   .then((res) => {
@@ -30,19 +32,24 @@ fetch(url)
       
        img[i].addEventListener("click", openPopUp)
       
+       closeButton.addEventListener("click", closePopUp)
+      
       function openPopUp(e){
         e.preventDefault()
         popUp.innerText = `Name : ${name} | Status : ${status} | Species : ${species} | Type : ${type} | Gender : ${gender} | Location : ${location} | Image :
         ${img[i]}`
         
-        popUp.style.opacity = 1
+        popUp.style.opacity = .75
+        closeButton.style.opacity = 1
+    }
+
+    function closePopUp(){
+      popUp.style.opacity = 0
+      closeButton.style.opacity = 0
     }
 }
 
-  // button.addEventListener('click', closePopUp)
+  
 
-  // function closePopUp() {
-  //   popUp.style.opacity = 0
-  // }
     
   });

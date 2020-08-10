@@ -28,10 +28,6 @@ fetch(url)
       let gender = res.results[i].gender
       
       let location = res.results[i].location.name
-
-     // popUp.innerText = JSON.stringify(res.results[i])
-      //console.log(res.results[i].location.name)
-      //console.log(res.results[i])
       
        img[i].addEventListener("click", openPopUp)
       
@@ -58,7 +54,4 @@ fetch(url)
     }
 }
 
-  
-
-    
   });
